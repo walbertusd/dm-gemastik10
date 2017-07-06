@@ -4,9 +4,9 @@ set -o monitor
 # means: run background processes in a separate processes...
 trap add_next_job CHLD 
 # execute add_next_job when we receive a child complete signal
-todo_array=($(seq 251 300)) # places output into an array
+todo_array=($(seq $1 $2)) # places output into an array
 index=0
-max_jobs=4
+max_jobs=$3
 
 function add_next_job {
     # if still jobs to do then add one
