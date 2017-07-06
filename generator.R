@@ -538,7 +538,8 @@ drops <- c(
 # 	"gefsLev4")
 
 data <- data[ , !(names(data) %in% drops)]
-data$solar <- as.data.frame(t(train[dateId, -1]))
+temp <- as.data.frame(t(train[dateId, -1]))
+data$solar <- as.numeric(temp[ , 1])
 
 filename <- paste(args[1], "Rda", sep = ".")
 dir <- './data'
