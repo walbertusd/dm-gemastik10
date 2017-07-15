@@ -1,2 +1,6 @@
 input/
-test.*
+test.sh
+test.R
+*.tar.*
+data/train.Rda
+data/test.Rda
